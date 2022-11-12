@@ -10,8 +10,8 @@ function Header() {
     <div className=' flex justify-between bg-black p-1'>
 
         <div className='flex-none'>
-            <IconButton color="primary" aria-label="upload picture">
-                <AccessTimeIcon />
+            <IconButton aria-label="upload picture">
+                <AccessTimeIcon className='my-auto text-white' />
             </IconButton>
         </div>
 
