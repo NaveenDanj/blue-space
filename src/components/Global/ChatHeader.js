@@ -6,7 +6,7 @@ import { Avatar } from '@mui/material';
 function chatHeader() {
     
     return (
-        <div className='bg-[#1A1D21] px-3 flex'>
+        <div style={{ borderBottom : '1px solid rgba(255,255,255,0.1)' , borderTop : '1px solid rgba(255,255,255,0.1)' }} className='bg-[#1A1D21] px-3 flex'>
 
             <IconButton className='my-auto' aria-label="delete">
                 <AutoAwesomeMosaicIcon className=' text-white ' />
