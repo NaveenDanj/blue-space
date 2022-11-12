@@ -4,11 +4,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AutoAwesomeMosaicIcon from "@mui/icons-material/AutoAwesomeMosaic";
 import AppRegistrationOutlinedIcon from "@mui/icons-material/AppRegistrationOutlined";
 import SidebarMainMenu from "./SidebarMainMenu";
+import ChannelSection from "./ChannelSection";
 
 function SideBarMain() {
   return (
     <div
-      className="bg-[#19171D] hidden md:block md:flex-none md:w-64 md:max-w-[100vh]"
+      className="pb-10 overflow-y-auto bg-[#19171D] hidden md:block md:flex-none max-h-[100vh] md:w-64 md:max-w-[100vh]"
       style={{
         borderRight: "1px solid rgba(255,255,255,0.1)",
       }}
@@ -34,6 +35,8 @@ function SideBarMain() {
       </div>
 
       <SidebarMainMenu />
+
+      <ChannelSection />
     </div>
   );
 }

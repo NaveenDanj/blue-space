@@ -7,10 +7,10 @@ import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
 
 function Home() {
   return (
-    <div>
+    <div className=" overflow-y-hidden ">
       <Header />
 
-      <div className="flex">
+      <div className="flex overflow-y-hidden">
         <SideBarMain />
         <div className="grow">
           <ChatHeader />
