@@ -8,9 +8,20 @@ function Home() {
   return (
     <div>
         <Header />
-        <ChatHeader />
-        <AddBookmarkSection />
-        <ChatBody />
+
+        <div className='flex'>
+                
+            <div className=' hidden md:block md:flex-none md:w-48 md:max-w-[100vh]'>
+                asd
+            </div>
+
+            <div className='grow'>
+                <ChatHeader />
+                <AddBookmarkSection />
+                <ChatBody />
+            </div>
+        </div>
+
     </div>
   )
 }
