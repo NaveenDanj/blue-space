@@ -18,11 +18,11 @@ function DirectMessagesSection() {
 
         <div>
           <IconButton>
-            <MoreVertOutlinedIcon fontSize="20" className="text-white" />
+            <MoreVertOutlinedIcon fontSize="20" className="text-white text-sm" />
           </IconButton>
 
           <IconButton>
-            <AddOutlinedIcon fontSize="8" className="text-white" />
+            <AddOutlinedIcon fontSize="20" className="text-white text-sm" />
           </IconButton>
         </div>
       </div>

@@ -2,7 +2,6 @@ import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined
 import IconButton from "@mui/material/IconButton";
 import TagOutlinedIcon from "@mui/icons-material/TagOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import CreateChannel from "../../Dialogs/CreateChannel";
 
 import { createTheme } from "@material-ui/core/styles";
@@ -32,7 +31,7 @@ function ChannelSection() {
           <div className="flex my-auto">
             <IconButton className="my-auto">
               <MoreVertOutlinedIcon
-                fontSize="8"
+                fontSize="20"
                 className="text-white text-sm"
               />
             </IconButton>
