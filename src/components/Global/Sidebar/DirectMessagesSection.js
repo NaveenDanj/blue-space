@@ -6,8 +6,8 @@ import { Avatar } from "@mui/material";
 
 function DirectMessagesSection() {
   return (
-    <div className="mt-3">
-      <div className="flex justify-between">
+    <div className="mt-3 text-white">
+      <div className="flex justify-between ">
         <div className="flex">
           <IconButton className="my-auto">
             <ArrowDropDownOutlinedIcon className="text-white" />
@@ -27,7 +27,7 @@ function DirectMessagesSection() {
         </div>
       </div>
 
-      <div>
+      <div className="text-white">
         <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
           <Avatar className="mr-2" sx={{ width: 20, height: 20 }}>
             M
@@ -50,6 +50,8 @@ function DirectMessagesSection() {
 
           <label className="my-auto text-sm cursor-pointer">Muditha Maduranga</label>
         </div>
+
+        
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 function SidebarMainMenu(){
     return (
         <div 
-            className="py-3"
+            className="py-3 text-white"
             style={{
                 borderBottom: "1px solid rgba(255,255,255,0.1)",
             }}

@@ -11,7 +11,7 @@ function Home() {
       <Header />
 
       <div className="flex overflow-y-hidden">
-        <SideBarMain />
+        <SideBarMain type='Home' />
         <div className="grow">
           <ChatHeader />
           <AddBookmarkSection />

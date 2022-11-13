@@ -3,14 +3,20 @@ import IconButton from '@mui/material/IconButton';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import { Avatar } from '@mui/material';
+import SidebarDrawer from './SidebarDrawer';
+import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer';
+
 function chatHeader() {
     
     return (
         <div style={{ borderBottom : '1px solid rgba(255,255,255,0.1)' , borderTop : '1px solid rgba(255,255,255,0.1)' }} className='bg-[#1A1D21] px-3 flex'>
 
-            <IconButton className='my-auto' aria-label="delete">
+            {/* <IconButton className='my-auto' aria-label="delete">
                 <AutoAwesomeMosaicIcon className=' text-white ' />
-            </IconButton>
+            </IconButton> */}
+            <div className='block md:hidden'>
+                <SidebarDrawer />
+            </div>
 
             <div className='my-auto flex p-1 rounded-lg hover:bg-[#222529] cursor-pointer'>
                 <Avatar className='mr-1' sx={{ width: 24, height: 24 }} >N</Avatar>

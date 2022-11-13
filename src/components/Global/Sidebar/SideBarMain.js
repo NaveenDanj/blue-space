@@ -7,10 +7,12 @@ import SidebarMainMenu from "./SidebarMainMenu";
 import ChannelSection from "./ChannelSection";
 import DirectMessagesSection from "./DirectMessagesSection";
 
-function SideBarMain() {
+function SideBarMain(prop) {
   return (
     <div
-      className=" pb-16 overflow-y-auto bg-[#19171D] hidden md:block md:flex-none max-h-[100vh] md:w-64 md:max-w-[100vh]"
+      // className=" pb-16 overflow-y-auto bg-[#19171D] hidden md:block md:flex-none max-h-[100vh] md:w-64 md:max-w-[100vh]"
+      className={prop.type == 'Drawer' ? 'pb-16 overflow-y-auto bg-[#19171D] block flex-none max-h-[100vh] w-64' : 'pb-16 overflow-y-auto bg-[#19171D] hidden md:block md:flex-none max-h-[100vh] md:w-64 '}
+      
       style={{
         borderRight: "1px solid rgba(255,255,255,0.1)",
       }}

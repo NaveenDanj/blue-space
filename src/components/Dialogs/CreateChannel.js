@@ -52,7 +52,7 @@ function CreateChannel() {
           PaperProps={{ sx: { maxWidth: 550 } }}
         >
           <DialogTitle className="flex justify-between" id="alert-dialog-title">
-            <h2 className="my-auto">Create a channel</h2>
+            <label className="my-auto">Create a channel</label>
 
             <IconButton
               onClick={handleClose}
@@ -92,7 +92,7 @@ function CreateChannel() {
                     id="outlined-basic"
                     variant="outlined"
                   />
-                  <label className="text-xs">What’s this channel about?</label>
+                  <label className="text-xs">Whats this channel about?</label>
                 </div>
 
                 <div className="flex justify-between mt-5">
