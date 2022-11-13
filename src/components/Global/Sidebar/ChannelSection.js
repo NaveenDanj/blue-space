@@ -3,6 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import TagOutlinedIcon from '@mui/icons-material/TagOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
+import CreateChannel from '../../Dialogs/CreateChannel';
 
 
 function ChannelSection(){
@@ -11,7 +12,7 @@ function ChannelSection(){
             
             <div className='flex justify-between'>
 
-                <div className='flex'>
+                <div className='flex my-auto'>
                     <IconButton className='my-auto'>
                         <ArrowDropDownOutlinedIcon className='text-white' />
                     </IconButton>
@@ -19,15 +20,15 @@ function ChannelSection(){
                     <label className='my-auto'>Channels</label>
                 </div>
 
-                <div>
+                <div className='flex my-auto'>
 
-                    <IconButton>
-                        <MoreVertOutlinedIcon fontSize='8' className='text-white' />
+                    <IconButton className='my-auto'>
+                        <MoreVertOutlinedIcon fontSize='8' className='text-white text-sm' />
                     </IconButton>
                     
-                    <IconButton>
-                        <AddOutlinedIcon fontSize='8' className='text-white' />
-                    </IconButton>
+                    <div className='my-auto'>
+                        <CreateChannel />
+                    </div>
 
                 </div>
 
