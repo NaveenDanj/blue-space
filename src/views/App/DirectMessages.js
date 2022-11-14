@@ -4,6 +4,7 @@ import ChatBody from "../../components/Global/ChatBody";
 import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
 import DirectMessagesHeader from "../../components/Global/ChatHeaderComponents/DirectMessagesHeader";
 import MentionSection from "../../components/DirectMessages/MentionSection";
+import DirectMessageBody from "../../components/DirectMessages/DirectMessageBody";
 
 function DirectMessages() {
   return (
@@ -15,7 +16,8 @@ function DirectMessages() {
         <div className="grow">
           <DirectMessagesHeader />
           <MentionSection />
-          <ChatBody />
+          <DirectMessageBody />
+          {/* <ChatBody /> */}
         </div>
       </div>
     </div>
