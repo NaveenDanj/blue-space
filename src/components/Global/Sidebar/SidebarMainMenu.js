@@ -1,12 +1,22 @@
 import React from "react";
 import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import NotificationImportantOutlinedIcon from '@mui/icons-material/NotificationImportantOutlined';
-import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
+import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
+import { useNavigate  } from "react-router-dom";
+
 
 function SidebarMainMenu(){
+
+    const navigate = useNavigate();
+
+    const handleNavigate = (route) => {
+        console.log('clicked!');
+        navigate(route)
+    }
+
     return (
         <div 
             className="py-3 text-white"
@@ -15,19 +25,19 @@ function SidebarMainMenu(){
             }}
         >
             
-            <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <MessageOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Threads</label>
             </div>
 
-            <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/direct-messages')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <NotificationImportantOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Direct messages</label>
             </div>
 
             <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
-                <AlternateEmailOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
-                <label className="my-auto text-sm cursor-pointer">Mentions and reactions</label>
+                <BookmarksOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
+                <label className="my-auto text-sm cursor-pointer">Saved</label>
             </div>
 
             <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">

@@ -30,7 +30,7 @@ function Header() {
                 <HelpOutlineIcon />
             </IconButton>
 
-            <Avatar className='mt-1 cursor-pointer' sx={{ width: 30, height: 30 }}>N</Avatar>
+            <Avatar className='mt-1 cursor-pointer' style={{ width: 30, height: 30 }}>N</Avatar>
         </div>
 
     </div>

@@ -8,6 +8,7 @@ import ChannelSection from "./ChannelSection";
 import DirectMessagesSection from "./DirectMessagesSection";
 
 function SideBarMain(prop) {
+  
   return (
     <div
       // className=" pb-16 overflow-y-auto bg-[#19171D] hidden md:block md:flex-none max-h-[100vh] md:w-64 md:max-w-[100vh]"
