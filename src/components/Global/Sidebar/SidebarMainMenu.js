@@ -13,7 +13,6 @@ function SidebarMainMenu(){
     const navigate = useNavigate();
 
     const handleNavigate = (route) => {
-        console.log('clicked!');
         navigate(route)
     }
 
@@ -35,7 +34,7 @@ function SidebarMainMenu(){
                 <label className="my-auto text-sm cursor-pointer">Direct messages</label>
             </div>
 
-            <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/saved')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <BookmarksOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Saved</label>
             </div>
