@@ -4,6 +4,7 @@ import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
 import SavedHeader from "../../components/Saved/SavedHeader";
 import SavedBody from "../../components/Saved/SavedBody";
 import DraftHeader from "../../components/DraftAndSent/DraftHeader";
+import DraftTabSection from "../../components/DraftAndSent/DraftTabSection";
 
 function DraftAndSent() {
   return (
@@ -14,7 +15,7 @@ function DraftAndSent() {
         <SideBarMain type="Home" />
         <div className="grow">
           <DraftHeader />
-          <SavedBody />
+          <DraftTabSection />
         </div>
       </div>
     </div>

@@ -5,7 +5,6 @@ function SavedBody() {
   return (
     <div
       style={{
-        //   position: "relative",
         overflowY: "auto",
         borderTop: "1px solid rgba(255,255,255,0.1)",
         maxHeight: "calc(100vh - 90px)",
