@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Avatar } from "@material-ui/core";
 import SavedMessageOptionCard from "./SavedMessageOptionCard";
 
-
-
 function SavedMessageCard() {
   let [optionShow, setOptionShow] = useState(false);
 
@@ -16,13 +14,6 @@ function SavedMessageCard() {
       <div className=" rounded-xl w-[100%] bg-[#1A1D21] p-3 mt-1 cursor-pointer">
         <div className="flex mb-2 justify-between">
           <label className="text-sm my-auto">Direct Message</label>
-          <div className="my-auto">
-            {optionShow && (
-              <div>
-                <SavedMessageOptionCard />
-              </div>
-            )}
-          </div>
         </div>
         <div className="flex justify-between mt-2 cursor-pointer">
           <div className="flex">
@@ -41,6 +32,14 @@ function SavedMessageCard() {
                 hello.
               </label>
             </div>
+          </div>
+
+          <div className="my-auto">
+            {optionShow && (
+              <div>
+                <SavedMessageOptionCard />
+              </div>
+            )}
           </div>
         </div>
       </div>
