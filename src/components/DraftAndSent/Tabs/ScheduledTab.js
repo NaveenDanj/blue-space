@@ -1,17 +1,17 @@
 import React from "react";
-import DraftCard from './DraftCard'
+import DraftCard from "./DraftCard";
+import ScheduledCard from "./ScheduledCard";
 
 function ScheduledTab() {
   return (
     <div className="w-full pb-10">
-      <DraftCard />
-      <DraftCard />
-      <DraftCard />
-      <DraftCard />
-      <DraftCard />
-      <DraftCard />
-      <DraftCard />
-      <DraftCard />
+      <ScheduledCard />
+      <ScheduledCard />
+      <ScheduledCard />
+      <ScheduledCard />
+      <ScheduledCard />
+      <ScheduledCard />
+      <ScheduledCard />
     </div>
   );
 }
