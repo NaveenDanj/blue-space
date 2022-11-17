@@ -7,6 +7,7 @@ import TabContext from '@mui/lab/TabContext';
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import DraftTab from "./Tabs/DraftTab";
 
 const theme = createTheme({
   palette: {
@@ -45,7 +46,7 @@ function DraftTabSection() {
           className="w-[100%] bg-[#222529]"
         >
           <TabPanel value="1">
-          
+            <DraftTab />
           </TabPanel>
           
           <TabPanel value="2">
