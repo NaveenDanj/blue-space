@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Global/Header";
 import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
 import DraftHeader from "../../components/DraftAndSent/DraftHeader";
-import DraftTabSection from "../../components/DraftAndSent/DraftTabSection";
+import PeopleAndGroupHeader from "../../components/PeopleAndGroup/PeopleAndGroupHeader";
 
 function PeopleAndGroups() {
   return (
@@ -12,8 +12,7 @@ function PeopleAndGroups() {
       <div className="flex overflow-y-hidden">
         <SideBarMain type="Home" />
         <div className="grow">
-          <DraftHeader />
-          <DraftTabSection />
+          <PeopleAndGroupHeader />
         </div>
       </div>
     </div>
