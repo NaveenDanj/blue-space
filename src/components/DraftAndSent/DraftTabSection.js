@@ -8,6 +8,7 @@ import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import DraftTab from "./Tabs/DraftTab";
+import ScheduledTab from "./Tabs/ScheduledTab";
 
 const theme = createTheme({
   palette: {
@@ -50,7 +51,7 @@ function DraftTabSection() {
           </TabPanel>
           
           <TabPanel value="2">
-          
+            <ScheduledTab />
           </TabPanel>
           
           <TabPanel value="3">

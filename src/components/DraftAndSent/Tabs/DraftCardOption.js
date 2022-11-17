@@ -1,18 +1,10 @@
 import React from "react";
 
-import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import IconButton from "@mui/material/IconButton";
-import FaceIcon from "@mui/icons-material/Face";
-import ThumbUpIcon from "@mui/icons-material/ThumbUp";
-import TagIcon from "@mui/icons-material/Tag";
-import BookmarkIcon from "@mui/icons-material/Bookmark";
-import QuickreplyIcon from "@mui/icons-material/Quickreply";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-
-import DeleteSweepIcon from '@mui/icons-material/DeleteSweep';
-import CreateIcon from '@mui/icons-material/Create';
-import ScheduleSendIcon from '@mui/icons-material/ScheduleSend';
-import SendIcon from '@mui/icons-material/Send';
+import DeleteSweepIcon from "@mui/icons-material/DeleteSweep";
+import CreateIcon from "@mui/icons-material/Create";
+import ScheduleSendIcon from "@mui/icons-material/ScheduleSend";
+import SendIcon from "@mui/icons-material/Send";
 
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
@@ -23,8 +15,6 @@ const theme = createTheme({
     type: "dark",
   },
 });
-
-
 
 function DraftCardOption() {
   return (
@@ -49,8 +39,6 @@ function DraftCardOption() {
         <IconButton className="my-auto" aria-label="delete">
           <SendIcon className=" text-white " />
         </IconButton>
-
-        
       </div>
     </ThemeProvider>
   );
