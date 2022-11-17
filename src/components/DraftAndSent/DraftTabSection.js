@@ -43,7 +43,7 @@ function DraftTabSection() {
 
         <div
           style={{ height: "calc(100vh - 90px)" }}
-          className="w-[100%] bg-[#222529]"
+          className="w-[100%] bg-[#222529] overflow-y-auto"
         >
           <TabPanel value="1">
             <DraftTab />
