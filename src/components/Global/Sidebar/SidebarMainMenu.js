@@ -39,7 +39,7 @@ function SidebarMainMenu(){
                 <label className="my-auto text-sm cursor-pointer">Saved</label>
             </div>
 
-            <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/draft')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <SendOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Draft & sent</label>
             </div>

@@ -2,19 +2,16 @@ import React from "react";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 
 import IconButton from "@mui/material/IconButton";
-import FaceIcon from '@mui/icons-material/Face';
-import ThumbUpIcon from '@mui/icons-material/ThumbUp';
-import TagIcon from '@mui/icons-material/Tag';
-import BookmarkIcon from '@mui/icons-material/Bookmark';
-import QuickreplyIcon from '@mui/icons-material/Quickreply';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-
+import FaceIcon from "@mui/icons-material/Face";
+import ThumbUpIcon from "@mui/icons-material/ThumbUp";
+import TagIcon from "@mui/icons-material/Tag";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import QuickreplyIcon from "@mui/icons-material/Quickreply";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-
-
 
 const theme = createTheme({
   palette: {
@@ -57,7 +54,6 @@ function SavedMessageOptionCard() {
         <IconButton className="my-auto" aria-label="delete">
           <MoreVertIcon className=" text-white " />
         </IconButton>
-
       </div>
     </ThemeProvider>
   );
