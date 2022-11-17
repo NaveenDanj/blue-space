@@ -4,7 +4,7 @@ import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
 import DraftHeader from "../../components/DraftAndSent/DraftHeader";
 import DraftTabSection from "../../components/DraftAndSent/DraftTabSection";
 
-function DraftAndSent() {
+function PeopleAndGroups() {
   return (
     <div className=" overflow-y-hidden ">
       <Header />
@@ -20,4 +20,4 @@ function DraftAndSent() {
   );
 }
 
-export default DraftAndSent;
+export default PeopleAndGroups;

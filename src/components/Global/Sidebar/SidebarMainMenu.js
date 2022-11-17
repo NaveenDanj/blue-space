@@ -6,6 +6,7 @@ import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import BookmarksOutlinedIcon from '@mui/icons-material/BookmarksOutlined';
 import { useNavigate  } from "react-router-dom";
+import MoreDropMenu from "./MoreDropMenu";
 
 
 function SidebarMainMenu(){
@@ -49,11 +50,7 @@ function SidebarMainMenu(){
                 <label className="my-auto text-sm cursor-pointer">Blue Space Workspace</label>
             </div>
 
-            <div className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
-                <MoreVertOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
-                <label className="my-auto text-sm cursor-pointer">More</label>
-            </div>
-
+            <MoreDropMenu />
 
         </div>
     );

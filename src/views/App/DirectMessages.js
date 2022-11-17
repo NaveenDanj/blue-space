@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../../components/Global/Header";
-import ChatBody from "../../components/Global/ChatBody";
 import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
 import DirectMessagesHeader from "../../components/Global/ChatHeaderComponents/DirectMessagesHeader";
 import MentionSection from "../../components/DirectMessages/MentionSection";
