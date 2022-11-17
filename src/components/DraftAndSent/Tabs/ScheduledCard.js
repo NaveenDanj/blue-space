@@ -1,11 +1,11 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import { Avatar } from "@material-ui/core";
 
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import DraftCardOption from "./DraftCardOption";
-import AvTimerIcon from '@mui/icons-material/AvTimer';
+import AvTimerIcon from "@mui/icons-material/AvTimer";
 
 const theme = createTheme({
   palette: {
@@ -13,9 +13,7 @@ const theme = createTheme({
   },
 });
 
-
 function ScheduledCard() {
-
   let [optionShow, setOptionShow] = useState(false);
 
   return (
@@ -36,8 +34,13 @@ function ScheduledCard() {
                     Naveen Hettiwaththa
                   </label>
                   <label className="my-auto text-gray-300 text-sm cursor-pointer">
-                    <label className="my-auto text-sm">Send tommorrow at 9:00 AM</label>
-                    <AvTimerIcon className="ml-2 my-auto" style={{ fontSize : 20 }} />
+                    <label className="my-auto text-sm">
+                      Send tommorrow at 9:00 AM
+                    </label>
+                    <AvTimerIcon
+                      className="ml-2 my-auto"
+                      style={{ fontSize: 20 }}
+                    />
                   </label>
                 </div>
                 <label className=" text-gray-300 cursor-pointer">

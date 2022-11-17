@@ -4,8 +4,8 @@ import React from "react";
 function DirectMessageCard() {
   return (
     <div className="w-[100%] mt-3">
-      <label className="text-xs ml-5">Saturday, November 12th</label>
-      <div className=" rounded-xl w-[100%] bg-[#1A1D21] p-3 mt-2 flex justify-between">
+      <label className="text-xs ml-5 ">Saturday, November 12th</label>
+      <div className=" rounded-xl w-[100%] bg-[#1A1D21] hover:bg-[#222529] p-3 mt-2 flex justify-between">
         <div className="flex">
           <Avatar>M</Avatar>
           <div className="ml-3 flex flex-col">

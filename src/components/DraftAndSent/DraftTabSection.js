@@ -9,6 +9,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import DraftTab from "./Tabs/DraftTab";
 import ScheduledTab from "./Tabs/ScheduledTab";
+import SentTab from "./Tabs/SentTab";
 
 const theme = createTheme({
   palette: {
@@ -55,7 +56,7 @@ function DraftTabSection() {
           </TabPanel>
           
           <TabPanel value="3">
-          
+            <SentTab />
           </TabPanel>
         
           </div>
