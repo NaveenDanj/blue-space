@@ -1,4 +1,5 @@
 import React from 'react'
+import FilesBody from '../../components/Files/FilesBody';
 import FilesHeader from '../../components/Files/FilesHeader';
 import Header from "../../components/Global/Header";
 import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
@@ -13,6 +14,7 @@ function Files() {
         <SideBarMain type="Home" />
         <div className="grow">
           <FilesHeader />
+          <FilesBody />
         </div>
       </div>
     </div>
