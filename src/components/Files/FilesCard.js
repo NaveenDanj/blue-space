@@ -6,6 +6,7 @@ import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import DraftCardOption from "../DraftAndSent/Tabs/DraftCardOption";
+import FilesCardOption from "./FilesCardOption";
 
 const theme = createTheme({
   palette: {
@@ -45,7 +46,7 @@ function FilesCard() {
 
             <div className="my-auto relative top-[] flex mb-2 justify-end">
               <div className="my-auto ">
-                {optionShow && <DraftCardOption />}
+                {optionShow && <FilesCardOption />}
               </div>
             </div>
           </div>
