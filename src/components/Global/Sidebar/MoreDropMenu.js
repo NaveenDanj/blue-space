@@ -9,7 +9,7 @@ import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
 import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
 import ManageSearchIcon from '@mui/icons-material/ManageSearch';
-
+import ArticleIcon from '@mui/icons-material/Article';
 
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
@@ -105,6 +105,11 @@ export default function CustomizedMenus() {
           <MenuItem onClick={handleClose} disableRipple>
             <ManageSearchIcon className="text-sm"/>
             <label className="text-sm">All channels</label>
+          </MenuItem>
+
+          <MenuItem onClick={handleClose} disableRipple>
+            <ArticleIcon className="text-sm"/>
+            <label className="text-sm">Files</label>
           </MenuItem>
 
         </StyledMenu>
