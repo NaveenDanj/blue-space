@@ -1,5 +1,5 @@
-import React from 'react'
-import SavedMessageCard from './SavedMessageCard'
+import React from "react";
+import SavedMessageCard from "./SavedMessageCard";
 
 function SavedBody() {
   return (
@@ -12,19 +12,18 @@ function SavedBody() {
       }}
       className="bg-[#222529] px-4 overflow-y-auto pb-10"
     >
-        <div className="mt-5"></div>
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-        <SavedMessageCard />
-
+      <div className="mt-5"></div>
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
+      <SavedMessageCard />
     </div>
-  )
+  );
 }
 
-export default SavedBody
+export default SavedBody;
