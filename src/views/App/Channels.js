@@ -1,4 +1,5 @@
 import React from 'react'
+import ChannelBody from '../../components/Channels/ChannelBody';
 import ChannelHeader from '../../components/Channels/ChannelHeader';
 import FilesBody from '../../components/Files/FilesBody';
 import FilesHeader from '../../components/Files/FilesHeader';
@@ -14,7 +15,7 @@ function Channels() {
         <SideBarMain type="Home" />
         <div className="grow">
           <ChannelHeader />
-          <FilesBody />
+          <ChannelBody />
         </div>
       </div>
     </div>
