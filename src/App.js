@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Channels from "./views/App/Channels";
 import DirectMessages from "./views/App/DirectMessages";
 import DraftAndSent from "./views/App/DraftAndSent";
 import Files from "./views/App/Files";
@@ -16,6 +17,8 @@ function App() {
         <Route path="/draft" index element={<DraftAndSent />} />
         <Route path="/peoples-and-group" index element={<PeopleAndGroups />} />
         <Route path="/files" index element={<Files />} />
+        <Route path="/channels" index element={<Channels />} />
+
       </Routes>
     </BrowserRouter>
   );
