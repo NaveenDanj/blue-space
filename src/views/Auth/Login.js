@@ -4,7 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { Link } from '@mui/material';
 
-function Register() {
+function Login() {
   return (
     <div className='w-full h-[100vh] flex justify-center'>
         <div className='mt-10'>
@@ -17,7 +17,7 @@ function Register() {
 
             <div className='mt-10'>
                 <center>
-                    <h1 className=' text-5xl font-bold' >First, enter your email</h1>
+                    <h1 className=' text-5xl font-bold' >Sign in to Blue Space</h1>
                 </center>
                 <center className='mt-3'>
                     <label className=' font-semibold'>We suggest using the email address you use at work.</label>
@@ -25,18 +25,14 @@ function Register() {
 
                 <div className='mx-5 mt-10'>
 
-                    <TextField
-                        size="small"
-                        className="text-white w-full mb-5"
-                        id="outlined-basic"
-                        variant="outlined"
-                        placeholder="name@work-email.com"
-                    />
+                    <Button variant="outlined" className='w-full' color="primary" autoFocus>
+                        Continue With Google
+                    </Button>
 
-                    <div className='mt-5'></div>
+                    <div className='mb-6'></div>
 
-                    <Button variant="contained" className='w-full' color="primary" autoFocus>
-                        Continue
+                    <Button variant="outlined" className='w-full' color="primary" autoFocus>
+                        Continue With Facebook
                     </Button>
 
                 </div>
@@ -50,26 +46,29 @@ function Register() {
 
                 <div className='mt-8 mx-5'>
 
+                    <TextField
+                        size="small"
+                        className="text-white w-full mb-5"
+                        id="outlined-basic"
+                        variant="outlined"
+                        placeholder="name@work-email.com"
+                    />
+
                     <div className='mt-5'></div>
 
-                    <Button variant="outlined" className='w-full' color="primary" autoFocus>
-                        Continue With Google
+                    <Button variant="contained" className='w-full' color="primary" autoFocus>
+                        Sign In With Email
                     </Button>
 
-                    <div className='mb-6'></div>
-
-                    <Button variant="outlined" className='w-full' color="primary" autoFocus>
-                        Continue With Facebook
-                    </Button>
                 </div>
 
                 <div className='mt-7 mx-5 flex justify-center'>
                     <div className='flex flex-col'>
                         <center>
-                            <label className=''>Already using Blue Space?</label>
+                            <label className=''>New to Blue Space?</label>
                         </center>
                         <center>
-                            <Link className=' cursor-pointer'>Sign in to an existing workspace</Link>
+                            <Link className=' cursor-pointer'>Create an account</Link>
                         </center>
                     </div>
                 </div>
@@ -83,4 +82,4 @@ function Register() {
   )
 }
 
-export default Register
+export default Login;
