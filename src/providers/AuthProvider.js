@@ -1,9 +1,10 @@
 import React , {useEffect, useState} from "react";
 import { auth } from "../util/firestore";
 
-export const AuthContext = React.createContext();
+const AuthContext = React.createContext(undefined);
+const AuthDispatchContext = React.createContext(undefined);
 
-export const AuthProvider = ({children}) => {
+const AuthProvider = ({children}) => {
 
     const [currentUser , setCurrentUser] = useState(null);
 
@@ -13,9 +14,11 @@ export const AuthProvider = ({children}) => {
 
     return (
         <AuthContext.Provider value={{currentUser}}>
-            {children}
+            <AuthDispatchContext.Provider value={setCurrentUser}>
+                {children}
+            </AuthDispatchContext.Provider>
         </AuthContext.Provider>
     );
-
-
 }
+
+export { AuthProvider, AuthContext, AuthDispatchContext };

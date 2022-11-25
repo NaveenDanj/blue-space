@@ -1,6 +1,8 @@
+import { useEffect , useContext } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider } from "./providers/AuthProvider";
+import { auth } from "./util/firestore";
 import Channels from "./views/App/Channels";
 import DirectMessages from "./views/App/DirectMessages";
 import DraftAndSent from "./views/App/DraftAndSent";
@@ -10,13 +12,22 @@ import PeopleAndGroups from "./views/App/PeopleAndGroups";
 import Saved from "./views/App/Saved";
 import Login from "./views/Auth/Login";
 import Register from "./views/Auth/Register";
+import { AuthDispatchContext } from "./providers/AuthProvider";
+import Loader from "./views/Loader";
 
 function App() {
+
+  const setCurrentUser = useContext(AuthDispatchContext);
+
+  useEffect(() => {
+    // auth.onAuthStateChanged(setCurrentUser);
+  } , []);
+
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          
+          <Route exact path='/' element={<Loader />}/>
           <Route exact path='/app' element={<PrivateRoute/>}>
             <Route exact path='/app' element={<Home/>}/>
             <Route path="/app/direct-messages" index element={<DirectMessages />} />
