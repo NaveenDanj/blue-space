@@ -17,7 +17,6 @@ function Loader() {
             if(!user){
                 navigate('/auth/login');
             }else{
-                console.log(user);
                 setCurrentUser(user);
                 dispatch(_setCurrentUser(user))
                 navigate('/app');
@@ -27,9 +26,7 @@ function Loader() {
   
   
     return (
-        <div>
-
-        </div>
+        <></>
     )
 }
 
