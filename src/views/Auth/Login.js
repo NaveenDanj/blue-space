@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import HomeWorkOutlinedIcon from '@mui/icons-material/HomeWorkOutlined';
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 import { getAuth, signInWithPopup,  GoogleAuthProvider } from "firebase/auth";
 import { doc, setDoc , collection , query, where, getDocs} from "firebase/firestore"; 
 import { db } from '../../util/firestore';
-import { AuthContext, AuthDispatchContext } from '../../providers/AuthProvider';
 
 
 function Login() {
@@ -16,21 +15,6 @@ function Login() {
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
     const navigate = useNavigate();
-
-    const setCurrentUser = useContext(AuthDispatchContext);
-
-    useEffect(() => {
-
-        auth.onAuthStateChanged((user) => {
-            if(!user){
-                navigate('/auth/login');
-            }else{
-                setCurrentUser(user);
-                navigate('/app');
-            }
-        });
-
-    } ,[]);
 
     const handleGoogleJoin = async() => {
 

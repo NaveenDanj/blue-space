@@ -1,12 +1,11 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { AuthContext, AuthDispatchContext } from '../providers/AuthProvider';
+import { AuthDispatchContext } from '../providers/AuthProvider';
 import { auth } from '../util/firestore';
 
 function Loader() {
 
     const setCurrentUser = useContext(AuthDispatchContext);
-    const {currentUser} = useContext(AuthContext);
     const navigate = useNavigate(); 
   
     useEffect(() => {
