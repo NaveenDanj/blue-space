@@ -6,6 +6,7 @@ import Files from "./views/App/Files";
 import Home from "./views/App/Home";
 import PeopleAndGroups from "./views/App/PeopleAndGroups";
 import Saved from "./views/App/Saved";
+import Register from "./views/Auth/Register";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/peoples-and-group" index element={<PeopleAndGroups />} />
         <Route path="/files" index element={<Files />} />
         <Route path="/channels" index element={<Channels />} />
+        <Route path="/auth/register" index element={<Register />} />
 
       </Routes>
     </BrowserRouter>
