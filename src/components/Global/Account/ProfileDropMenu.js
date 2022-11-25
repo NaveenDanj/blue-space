@@ -14,6 +14,10 @@ import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ProfileDialog from "./ProfileDialog";
+import { useSelector } from 'react-redux'
+
+
+
 
 const theme = createTheme({
   palette: {
@@ -63,6 +67,9 @@ function ProfileDropMenu() {
     setAnchorEl(null);
   };
 
+  const userDocData = useSelector((state) => state.currentUser.currentUserDoc);
+
+
   return (
     <div>
       {/* <div
@@ -78,7 +85,12 @@ function ProfileDropMenu() {
 
       <IconButton className="my-auto" onClick={handleClick}>
         <Avatar className="cursor-pointer" style={{ width: 30, height: 30 }}>
-          N
+          <img
+            style={{ width: 37, height: 37 }}
+            alt=""
+            className="mb-2 rounded-sm"
+            src={userDocData.photoURL}
+          />
         </Avatar>
       </IconButton>
 
@@ -96,13 +108,14 @@ function ProfileDropMenu() {
           <MenuItem className="flex" onClick={handleClose} disableRipple>
             <Avatar style={{ width: 30, height: 30 }}>
               <img
+                style={{ width: 37, height: 37 }}
                 alt=""
                 className="mb-2 rounded-sm"
-                src="https://avatars.githubusercontent.com/u/48654030?v=4"
+                src={userDocData.photoURL}
               />
             </Avatar>
             <div className="ml-2 flex flex-col">
-                <label className="text-sm font-semibold">Naveen Hettiwaththa</label>
+                <label className="text-sm font-semibold">{userDocData.displayName}</label>
                 <label className="text-xs font-semibold">Active</label>
             </div>
           </MenuItem>
