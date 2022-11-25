@@ -6,6 +6,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import ProfileDialog from './Account/ProfileDialog';
+import ProfileDropMenu from './Account/ProfileDropMenu';
 function Header() {
   return (
     <div className=' flex justify-between bg-black p-1'>
@@ -32,7 +33,8 @@ function Header() {
             </IconButton>
 
             {/* <Avatar className='mt-1 cursor-pointer' style={{ width: 30, height: 30 }}>N</Avatar> */}
-            <ProfileDialog />
+            {/* <ProfileDialog /> */}
+            <ProfileDropMenu />
         </div>
 
     </div>

@@ -9,6 +9,9 @@ import TextField from "@mui/material/TextField";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import Avatar from "@mui/material/Avatar";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+import MenuItem from "@mui/material/MenuItem";
 
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
@@ -33,11 +36,16 @@ function ProfileDialog() {
 
   return (
     <div className="mx-auto">
-      <IconButton className="my-auto" onClick={handleClickOpen}>
+      {/* <IconButton className="my-auto" onClick={handleClickOpen}>
         <Avatar className="cursor-pointer" style={{ width: 30, height: 30 }}>
           N
         </Avatar>
-      </IconButton>
+      </IconButton> */}
+
+      <MenuItem onClick={handleClickOpen} disableRipple>
+        <AccountCircleIcon className="text-sm" />
+        <label className="text-sm">Account</label>
+      </MenuItem>
 
       <ThemeProvider theme={theme}>
         <CssBaseline />
