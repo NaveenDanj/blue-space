@@ -4,8 +4,12 @@ import ChatHeader from "../../components/Global/ChatHeader";
 import AddBookmarkSection from "../../components/Global/AddBookmarkSection";
 import ChatBody from "../../components/Global/ChatBody";
 import SideBarMain from "../../components/Global/Sidebar/SideBarMain";
+import { useSelector } from 'react-redux'
 
 function Home() {
+
+  const user = useSelector((state) => state.currentUser.currentUser)
+  
   return (
     <div className=" overflow-y-hidden ">
       <Header />
