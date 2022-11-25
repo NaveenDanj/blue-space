@@ -25,22 +25,22 @@ function SidebarMainMenu(){
             }}
         >
             
-            <div onClick={() => handleNavigate('/')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/app')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <MessageOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Threads</label>
             </div>
 
-            <div onClick={() => handleNavigate('/direct-messages')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/app/direct-messages')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <NotificationImportantOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Direct messages</label>
             </div>
 
-            <div onClick={() => handleNavigate('/saved')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/app/saved')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <BookmarksOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Saved</label>
             </div>
 
-            <div onClick={() => handleNavigate('/draft')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
+            <div onClick={() => handleNavigate('/app/draft')} className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]">
                 <SendOutlinedIcon className="my-auto mr-2 cursor-pointer" fontSize="12" />
                 <label className="my-auto text-sm cursor-pointer">Draft & sent</label>
             </div>

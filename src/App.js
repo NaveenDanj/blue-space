@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
+import { AuthProvider } from "./providers/AuthProvider";
 import Channels from "./views/App/Channels";
 import DirectMessages from "./views/App/DirectMessages";
 import DraftAndSent from "./views/App/DraftAndSent";
@@ -11,20 +13,26 @@ import Register from "./views/Auth/Register";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" index element={<Home />} />
-        <Route path="/direct-messages" index element={<DirectMessages />} />
-        <Route path="/saved" index element={<Saved />} />
-        <Route path="/draft" index element={<DraftAndSent />} />
-        <Route path="/peoples-and-group" index element={<PeopleAndGroups />} />
-        <Route path="/files" index element={<Files />} />
-        <Route path="/channels" index element={<Channels />} />
-        <Route path="/auth/register" index element={<Register />} />
-        <Route path="/auth/login" index element={<Login />} />
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          
+          <Route exact path='/app' element={<PrivateRoute/>}>
+            <Route exact path='/app' element={<Home/>}/>
+            <Route path="/app/direct-messages" index element={<DirectMessages />} />
+            <Route path="/app/saved" index element={<Saved />} />
+            <Route path="/app/draft" index element={<DraftAndSent />} />
+            <Route path="/app/peoples-and-group" index element={<PeopleAndGroups />} />
+            <Route path="/app/files" index element={<Files />} />
+            <Route path="/app/channels" index element={<Channels />} />
+          </Route>
 
-      </Routes>
-    </BrowserRouter>
+          <Route path="/auth/register" index element={<Register />} />
+          <Route path="/auth/login" index element={<Login />} />
+
+        </Routes>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
