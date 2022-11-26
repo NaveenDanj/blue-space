@@ -36,7 +36,10 @@ function Login() {
                 email : results.user.email,
                 phoneNumber : results.user.phoneNumber,
                 photoURL : results.user.photoURL,
-                uid : results.user.uid
+                uid : results.user.uid,
+                title : '',
+                fullname : '',
+                namePronunciation : ''
             }
             
             if(querySnapshot.empty){

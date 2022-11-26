@@ -5,6 +5,7 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import TuneIcon from '@mui/icons-material/Tune';
 import SearchIcon from '@mui/icons-material/Search';
 import ProfileDropMenu from './Account/ProfileDropMenu';
+import ProfileDialog from './Account/ProfileDialog';
 
 
 
@@ -34,7 +35,7 @@ function Header() {
                 <IconButton color="primary" aria-label="upload picture" component="label">
                     <HelpOutlineIcon />
                 </IconButton>
-                <ProfileDropMenu />
+                <ProfileDialog />
             </div>
 
         </div>

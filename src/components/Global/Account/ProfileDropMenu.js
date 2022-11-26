@@ -15,6 +15,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import ProfileDialog from "./ProfileDialog";
 import { useSelector } from 'react-redux'
+import { useState } from "react";
 
 
 
@@ -67,8 +68,8 @@ function ProfileDropMenu() {
     setAnchorEl(null);
   };
 
-  const userDocData = useSelector((state) => state.currentUser.currentUserDoc);
 
+  const userDocData = useSelector((state) => state.currentUser.currentUserDoc);
 
   return (
     <div>
@@ -85,50 +86,41 @@ function ProfileDropMenu() {
 
       <IconButton className="my-auto" onClick={handleClick}>
         <Avatar className="cursor-pointer" style={{ width: 30, height: 30 }}>
-          <img
+          {userDocData && (<img
             style={{ width: 37, height: 37 }}
             alt=""
             className="mb-2 rounded-sm"
             src={userDocData.photoURL}
-          />
+          />)}
         </Avatar>
       </IconButton>
 
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <StyledMenu
-          id="demo-customized-menu"
-          MenuListProps={{
-            "aria-labelledby": "demo-customized-button",
-          }}
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
         >
           <MenuItem className="flex" onClick={handleClose} disableRipple>
             <Avatar style={{ width: 30, height: 30 }}>
-              <img
-                style={{ width: 37, height: 37 }}
-                alt=""
-                className="mb-2 rounded-sm"
-                src={userDocData.photoURL}
-              />
+              {userDocData && (
+                <img
+                  style={{ width: 37, height: 37 }}
+                  alt=""
+                  className="mb-2 rounded-sm"
+                  src={userDocData.photoURL}
+                />
+              )}
             </Avatar>
             <div className="ml-2 flex flex-col">
-                <label className="text-sm font-semibold">{userDocData.displayName}</label>
+                <label className="text-sm font-semibold">{userDocData && userDocData.displayName}</label>
                 <label className="text-xs font-semibold">Active</label>
             </div>
           </MenuItem>
 
           <Divider sx={{ my: 0.5 }} />
-
-          {/* <MenuItem onClick={handleClose} disableRipple>
-            <AccountCircleIcon className="text-sm" />
-            <label className="text-sm">Account</label>
-          </MenuItem> */}
-
-          <ProfileDialog />
-
+          
           <MenuItem onClick={handleClose} disableRipple>
             <AssignmentIndIcon className="text-sm" />
             <label className="text-sm">People & user groups</label>
