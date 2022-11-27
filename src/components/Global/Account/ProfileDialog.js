@@ -1,4 +1,4 @@
-import React , {useEffect, useState , useRef} from "react";
+import React , {useEffect, useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
@@ -8,10 +8,8 @@ import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import TextField from "@mui/material/TextField";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Alert from '@mui/material/Alert';
 import { useDispatch, useSelector } from 'react-redux'
-import MenuItem from "@mui/material/MenuItem";
 import { createTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -49,6 +47,8 @@ function ProfileDialog(props) {
 
   const handleClose = () => {
     setOpen(false);
+    setError('');
+    setSuccess(false);
   };
 
   const loadUserData = async() => {
@@ -96,6 +96,9 @@ function ProfileDialog(props) {
 
   }
 
+  const handleUploadPhoto = async () => {
+    
+  }
 
   return (
     <div className="mx-auto">
@@ -174,7 +177,7 @@ function ProfileDialog(props) {
                   />
                   <label className="text-xs">
                     This could be your first name, or a nickname — however you’d
-                    like people to refer to you in Slack.
+                    like people to refer to you in Blue Space.
                   </label>
                 </div>
 
@@ -223,6 +226,7 @@ function ProfileDialog(props) {
                     autoFocus
                     className="text-white w-[100%]"
                     style={{ color: "white" }}
+                    onClick={handleUploadPhoto}
                   >
                     Upload Photo
                   </Button>

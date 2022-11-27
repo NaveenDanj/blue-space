@@ -73,17 +73,6 @@ function ProfileDropMenu() {
 
   return (
     <div>
-      {/* <div
-        onClick={handleClick}
-        className="flex py-1 px-3 cursor-pointer hover:bg-[#27242C]"
-      >
-        <MoreVertOutlinedIcon
-          className="my-auto mr-2 cursor-pointer"
-          fontSize="12"
-        />
-        <label className="my-auto text-sm cursor-pointer">More</label>
-      </div> */}
-
       <IconButton className="my-auto" onClick={handleClick}>
         <Avatar className="cursor-pointer" style={{ width: 30, height: 30 }}>
           {userDocData && (<img
@@ -120,7 +109,7 @@ function ProfileDropMenu() {
           </MenuItem>
 
           <Divider sx={{ my: 0.5 }} />
-          
+
           <MenuItem onClick={handleClose} disableRipple>
             <AssignmentIndIcon className="text-sm" />
             <label className="text-sm">People & user groups</label>
