@@ -14,6 +14,7 @@ import Register from "./views/Auth/Register";
 import Loader from "./views/Loader";
 import Step1 from "./views/SetupWorkspace/Step1";
 import Step2 from "./views/SetupWorkspace/Step2";
+import Step3 from "./views/SetupWorkspace/Step3";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
 
           <Route path="/workspace/step1" element={<Step1 />}  />
           <Route path="/workspace/step2" element={<Step2 />}  />
+          <Route path="/workspace/step3" element={<Step3 />}  />
 
           <Route path="/auth/register" element={<Register />} />
           <Route path="/auth/login" element={<Login />} />
