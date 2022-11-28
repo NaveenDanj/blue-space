@@ -12,6 +12,7 @@ import Saved from "./views/App/Saved";
 import Login from "./views/Auth/Login";
 import Register from "./views/Auth/Register";
 import Loader from "./views/Loader";
+import Step1 from "./views/SetupWorkspace/Step1";
 
 function App() {
 
@@ -20,18 +21,21 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path='/' element={<Loader />}/>
+          
           <Route exact path='/app' element={<PrivateRoute/>}>
             <Route exact path='/app' element={<Home/>}/>
-            <Route path="/app/direct-messages" index element={<DirectMessages />} />
-            <Route path="/app/saved" index element={<Saved />} />
-            <Route path="/app/draft" index element={<DraftAndSent />} />
-            <Route path="/app/peoples-and-group" index element={<PeopleAndGroups />} />
-            <Route path="/app/files" index element={<Files />} />
-            <Route path="/app/channels" index element={<Channels />} />
+            <Route path="/app/direct-messages"  element={<DirectMessages />} />
+            <Route path="/app/saved"  element={<Saved />} />
+            <Route path="/app/draft"  element={<DraftAndSent />} />
+            <Route path="/app/peoples-and-group"  element={<PeopleAndGroups />} />
+            <Route path="/app/files"  element={<Files />} />
+            <Route path="/app/channels"  element={<Channels />} />
           </Route>
 
-          <Route path="/auth/register" index element={<Register />} />
-          <Route path="/auth/login" index element={<Login />} />
+          <Route path="/workspace" element={<Step1 />}  />
+
+          <Route path="/auth/register" element={<Register />} />
+          <Route path="/auth/login" element={<Login />} />
 
         </Routes>
       </BrowserRouter>
