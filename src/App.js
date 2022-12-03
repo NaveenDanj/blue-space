@@ -24,7 +24,7 @@ function App() {
         <Routes>
           <Route exact path='/' element={<Loader />}/>
 
-          <Route exact path='/app' element={<PrivateRoute/>}>
+          <Route exact path='/app' element={<PrivateRoute />}>
             <Route exact path='/app' element={<Home/>}/>
             <Route path="/app/direct-messages"  element={<DirectMessages />} />
             <Route path="/app/saved"  element={<Saved />} />
@@ -34,9 +34,13 @@ function App() {
             <Route path="/app/channels"  element={<Channels />} />
           </Route>
 
-          <Route path="/workspace/step1" element={<Step1 />}  />
-          <Route path="/workspace/step2" element={<Step2 />}  />
-          <Route path="/workspace/step3" element={<Step3 />}  />
+          <Route exact path='/workspace' element={<PrivateRoute />}>
+
+            <Route path="/workspace/step1" element={<Step1 />}  />
+            <Route path="/workspace/step2" element={<Step2 />}  />
+            <Route path="/workspace/step3" element={<Step3 />}  />
+
+          </Route>
 
           <Route path="/auth/register" element={<Register />} />
           <Route path="/auth/login" element={<Login />} />

@@ -13,11 +13,18 @@ const theme = createTheme({
 });
 
 function Step3() {
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('form submitted!');
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="h-[100vh] bg-[#1A1D21] p-10">
-        <div>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <label className="text-sm">Step 3 of 3</label>
           <br />
           <div className="py-5"></div>
@@ -48,10 +55,11 @@ function Step3() {
             className="md:w-48 w-full"
             color="primary"
             autoFocus
+            type="submit"
           >
             NEXT
           </Button>
-        </div>
+        </form>
       </div>
     </ThemeProvider>
   );
