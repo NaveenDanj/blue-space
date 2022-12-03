@@ -46,11 +46,12 @@ function Step1() {
         createdAt : Timestamp.fromDate(new Date()),
         owner : userDocData.uid,
         members : [],
-        channels : []
+        channels : [],
+        workspaceId
       });
 
       setLoading(false);
-      navigate('/workspace/step2');
+      navigate(`/workspace/step2/${workspaceId}`);
 
     }catch(err){
       setError('err');

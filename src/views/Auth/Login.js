@@ -39,7 +39,10 @@ function Login() {
                 uid : results.user.uid,
                 title : '',
                 fullname : '',
-                namePronunciation : ''
+                namePronunciation : '',
+                workspaces : [],
+                loggedInWorkspace : ''
+
             }
             
             if(querySnapshot.empty){

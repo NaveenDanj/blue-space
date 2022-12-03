@@ -27,12 +27,20 @@ function Loader() {
                 const q = query(userRef, where("email", "==", user.email));
                 const querySnapshot = await getDocs(q);
 
+                let userData = null;
+
                 querySnapshot.forEach(user => {
                     console.log(user.data());
                     dispatch(setCurrentUserDoc( user.data() ));
+                    userData = user.data();
                 });
 
-                navigate('/app');
+                if(!userData.workspaces || userData.loggedInWorkspace === ''){
+                    navigate('/landing');
+                }else{
+                    navigate('/app');
+                }
+
             }
         });
     });
